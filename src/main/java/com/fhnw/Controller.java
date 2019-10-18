@@ -83,7 +83,7 @@ public class Controller {
     //setzen das Mail in den Ham- / oder Spamkorbus, je nachdem ob die Spamwahrscheinlichkeit des Mails den Schwellenwert übersteigt.
     private void setToKorpus(List<Email> mails) {
         for (Email mail : mails) {
-            if (mail.getSpamWahrscheinlichkeit() <(SCHWELLENWERT) ){
+            if (mail.getSpamWahrscheinlichkeit() > (SCHWELLENWERT) ){
                 hamKorbus.getMails().add(mail);
             } else {
                 spamKorpus.getMails().add(mail);

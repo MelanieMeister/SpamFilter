@@ -50,9 +50,9 @@ public class Reader {
     //import kallibrieren-zip
     public void importKallibrierMailsByType(EmailType type ) {
         if(type == EmailType.HAM){
-            importMailsByType(type,PATH+ PATHNAME_Kalib_HAM, hamTestMails);
+            importMailsByType(type,PATH+ PATHNAME_Kalib_HAM, hamKallibTestMails);
         }else{
-            importMailsByType(type, PATH+PATHNAME_Kalib_SPAM, spamTestMails);
+            importMailsByType(type, PATH+PATHNAME_Kalib_SPAM, spamKallibTestMails);
         }
     }
 
@@ -133,13 +133,13 @@ public class Reader {
 
     //limited the mailsSize for tet cases
     public List<Email> getLists(List<Email> mails2){
-//        List<Email> mail = new ArrayList<>();
-//        for(int i=0; i<33; i++){
-//            mail.add(mails2.get(i));
-//        }
-//
-//        return mail;
-        return  mails2;
+        List<Email> mail = new ArrayList<>();
+        for(int i=0; i<15; i++){
+            mail.add(mails2.get(i));
+        }
+
+        return mail;
+//        return  mails2;
     }
     public List<Email> getHamMails() {
        return getLists( hamMails);
