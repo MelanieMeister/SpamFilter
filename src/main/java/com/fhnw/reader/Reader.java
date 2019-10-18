@@ -133,13 +133,13 @@ public class Reader {
 
     //limited the mailsSize for tet cases
     public List<Email> getLists(List<Email> mails2){
-        List<Email> mail = new ArrayList<>();
-        for(int i=0; i<15; i++){
-            mail.add(mails2.get(i));
-        }
-
-        return mail;
-//        return  mails2;
+//        List<Email> mail = new ArrayList<>();
+//        for(int i=0; i<15; i++){
+//            mail.add(mails2.get(i));
+//        }
+//
+//        return mail;
+        return  mails2;
     }
     public List<Email> getHamMails() {
        return getLists( hamMails);
